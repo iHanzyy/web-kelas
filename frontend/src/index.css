@@ -10,34 +10,109 @@
   src: url(/src/fonts/Poppins-Bold.ttf);
 }
 
+@font-face {
+  font-family: "poppins semibold";
+  src: url(/src/fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "poppins extra bold";
+  src: url(/src/fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: "poppins light";
+  src: url(/src/fonts/Poppins-Light.ttf);
+}
+
+
+
 :root {
   font-family: "poppins";
-  color: oklch(0.9 0.1568 185.22);
+  color: var(--color-primary);
 }
 
 .glow {
-  z-index: -10;
-  color: oklch(0.25 0 0);
-  
-  /* hide fill */
+  color: var(--color-background);
   text-shadow:
-  /* core glow — bright and sharp */
-   /* crisp core */
-   0 0 4px   rgba(20,255,236,1),
-   /* strong mid glow */
-   0 0 8px   rgba(20,255,236,0.8),
-   0 0 16px  rgba(20,255,236,0.6),
-   /* softer outer haze */
-   0 0 32px  rgba(20,255,236,0.4),
-   0 0 64px  rgba(20,255,236,0.2),
-   /* gentle fade-out */
-   0 0 96px  rgba(20,255,236,0.1);
+    0 0 4px rgba(20, 255, 236, 1),
+    /* strong mid glow */
+    0 0 8px rgba(20, 255, 236, 0.8),
+    0 0 16px rgba(20, 255, 236, 0.6),
+    /* softer outer haze */
+    0 0 32px rgba(20, 255, 236, 0.4),
+    0 0 64px rgba(20, 255, 236, 0.2),
+    /* gentle fade-out */
+    0 0 96px rgba(20, 255, 236, 0.1);
+}
+
+.upper-glow {
+  /* neon outline */
+  stroke: #0ff;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+
+  /* glow/shadow */
+  filter:
+    drop-shadow(0 0 16px #0ff) drop-shadow(0 0 32px #0ff) drop-shadow(0 0 64px #0ff);
 }
 
 @theme {
   --color-background: oklch(0.25 0 0);
-  --color-foreground: oklch(0.32 0 0);
+  --color-background-secondary: oklch(0.32 0 0);
   --color-primary: oklch(0.9 0.1568 185.22);
+  --color-secondary: oklch(0.51 0.0832 199.23);
+  --color-foreground: oklch(0.89 0 0);
+  --color-card: oklch(0.89 0 0);
   --font-poppins-bold: "poppins bold";
+  --font-poppins-semibold: "poppins semibold";
+  --font-poppins-extrabold: "poppins extra bold";
+  --font-poppins-light: "poppins light";
+  --animate-slide-left: slide-to-left 20s linear infinite;
+  --animate-slide-right: slide-to-right 20s linear infinite;
+}
+.carousel {
+  margin: 0 auto;
+  width: 175vw;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
 
+.group {
+  display: flex;
+  gap: 40px;
+  padding: 0 20px;
+  min-width: 100%;
+  flex-wrap: nowrap;
+}
+
+.slide-left {
+  animation: var(--animate-slide-left);
+}
+
+.slide-right {
+  animation: var(--animate-slide-right);
+}
+
+.group + .group {
+  margin-left: 40px;
+}
+
+@keyframes slide-to-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 40px));
+  }
+}
+
+@keyframes slide-to-right {
+  from {
+    transform: translateX(calc(-100% - 40px));
+  }
+  to {
+    transform: translateX(0);
+  }
 }

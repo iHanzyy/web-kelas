@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <div className="flex h-[60px] bg-foreground justify-between ">
+    <div className="flex h-[60px] bg-background-secondary justify-between ">
       <div className="flex justify-baseline items-center">
         <img src="/rpl-logo.svg" className="size-[38px] ml-[28px] cursor-pointer"/>
       </div>
