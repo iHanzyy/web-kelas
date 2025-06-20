@@ -1,6 +1,6 @@
 import AccentUnderline from "./AccentUnderline";
 
-export default function Footer() {
+export default function Footer(props) {
   const developers = [
     "Mohammad Jonah Setiawan",
     "Zulfahmi Risky Aulia",
@@ -19,7 +19,7 @@ export default function Footer() {
 
 
   return (
-    <footer className="w-screen h-[427px] bg-secondary ">
+    <footer className={`w-screen h-[427px] ${props.className || ""}`}>
       <div className="p-20 bg-background rounded-t-[100px] upper-glow">
         <div className="bg-background  flex w-full h-full justify-between">
           <div className="">
