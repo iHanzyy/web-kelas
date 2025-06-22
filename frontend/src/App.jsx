@@ -4,6 +4,7 @@ import Menfess from "./pages/Menfess"
 import Memory from "./pages/Memory"
 import Test from "./pages/test"
 import AboutUs from "./pages/AboutUs"
+import Structure from "./pages/Structure"
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Route path="/memory" element={<Memory />}></Route>
       <Route path="/test" element={<Test />}></Route>
       <Route path="/about-us" element={<AboutUs />}></Route>
+      <Route path="/structure" element={<Structure />}></Route>
     </Routes>
   )
 }

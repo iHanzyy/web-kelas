@@ -15,7 +15,7 @@ export default function Cards() {
           <hr className="bg-primary glow" />
         </div>
         <section
-          className=" grid grid-cols-[repeat(4,max-content)] justify-between gap-y-20 w-full max-w-[1200px] mx-auto px-4">
+          className=" grid grid-cols-[repeat(4,max-content)] justify-between gap-y-20 w-full max-w-[1100px] mx-auto px-4">
           {Array.from({ length: 12 }).map((_, i) => (
             <ProfileCard key={i} />
           ))}

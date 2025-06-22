@@ -59,11 +59,14 @@
 
 @theme {
   --color-background: oklch(0.25 0 0);
+  --color-background-2: oklch(0.2478 0 0);
   --color-background-secondary: oklch(0.32 0 0);
+  --color-background-tersary: oklch(0.3171 0 0);
   --color-primary: oklch(0.9 0.1568 185.22);
   --color-secondary: oklch(0.51 0.0832 199.23);
   --color-foreground: oklch(0.89 0 0);
   --color-card: oklch(0.89 0 0);
+  
   --font-poppins-bold: "poppins bold";
   --font-poppins-semibold: "poppins semibold";
   --font-poppins-extrabold: "poppins extra bold";
