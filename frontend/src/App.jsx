@@ -5,6 +5,8 @@ import Memory from "./pages/Memory"
 import Test from "./pages/test"
 import AboutUs from "./pages/AboutUs"
 import Structure from "./pages/Structure"
+import Schedule from "./pages/Schedule"
+import NotFound from "./pages/NotFound"
 
 function App() {
 
@@ -16,6 +18,8 @@ function App() {
       <Route path="/test" element={<Test />}></Route>
       <Route path="/about-us" element={<AboutUs />}></Route>
       <Route path="/structure" element={<Structure />}></Route>
+      <Route path="/schedule" element={<Schedule />}></Route>
+      <Route path="/*" element={<NotFound />}></Route>
     </Routes>
   )
 }

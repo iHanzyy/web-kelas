@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import Footer from "../components/Footer";
 import GlowText from "../components/GlowText";
 import Navbar from "../components/Navbar";
@@ -15,7 +16,7 @@ export default function Structure() {
       </div>
       <div className="backdrop-blur-[200px]">
         <div className="w-screen h-[calc(100vh-60px)]  flex justify-center items-center">
-          <div className="text-[48px] flex"><span className="underline underline-offset-8"><GlowText size={48} text="Structure" /></span>&nbsp;<GlowText size={48} text="&" />&nbsp;<span className="brightness-75">Schedule</span></div>
+          <div className="text-[48px] flex"><span className="underline underline-offset-8"><GlowText size={48} text="Structure" /></span>&nbsp;<GlowText size={48} text="&" />&nbsp;<span className="brightness-75"><Link to={"/schedule"}>Schedule</Link></span></div>
         </div>
         <div className="flex flex-col pb-56 w-[1000px] m-auto gap-10">
           <div className="flex flex-col gap-10">
