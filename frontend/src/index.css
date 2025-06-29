@@ -35,15 +35,17 @@
 .glow {
   color: var(--color-background);
   text-shadow:
-    0 0 4px rgba(20, 255, 236, 1),
+      /* 0 0 4px rgba(20, 255, 236, 1),
 
-    0 0 8px rgba(20, 255, 236, 0.8),
-    0 0 16px rgba(20, 255, 236, 0.6),
+      0 0 8px rgba(20, 255, 236, 0.8), */
+    0 0 32px rgba(20, 255, 236, 0.6),
 
     0 0 32px rgba(20, 255, 236, 0.4),
     0 0 64px rgba(20, 255, 236, 0.2),
 
     0 0 96px rgba(20, 255, 236, 0.1);
+
+  transition: all 0.3s ease-in-out;
 }
 
 .upper-glow {
