@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className="cursor-pointer"><Link to="/about-us">About Us</Link></div>
         <div className="cursor-pointer"><Link to="/structure">Structure & Schedule</Link></div>
         <div className="cursor-pointer"><Link to="/memories">Memories</Link></div>
-        <div className="cursor-pointer">Menfess</div>
+        <div className="cursor-pointer"><Link to="/menfess">Menfess</Link></div>
       </div>
     </div>
   )

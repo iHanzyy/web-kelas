@@ -9,7 +9,7 @@
   --color-secondary: oklch(0.51 0.0832 199.23);
   --color-foreground: oklch(0.89 0 0);
   --color-card: oklch(0.89 0 0);
-
+  --color-input: oklch(0.5486 0 0);
   --font-poppins-bold: "poppins bold";
   --font-poppins-semibold: "poppins semibold";
   --font-poppins-extrabold: "poppins extra bold";
@@ -59,8 +59,7 @@
 /* Glow effects */
 .glow {
   color: var(--color-background);
-  text-shadow: 0 0 32px rgba(20, 255, 236, 0.6), 0 0 32px rgba(20, 255, 236, 0.4), 0 0 64px rgba(20, 255, 236, 0.2), 0 0
-    96px rgba(20, 255, 236, 0.1);
+  text-shadow: 0 0 32px rgba(20, 255, 236, 0.6), 0 0 32px rgba(20, 255, 236, 0.4), 0 0 64px rgba(20, 255, 236, 0.2), 0 0 96px rgba(20, 255, 236, 0.1);
   transition: all 0.3s ease-in-out;
 }
 
@@ -113,6 +112,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(calc(-100% - 40px));
   }
@@ -122,6 +122,7 @@
   from {
     transform: translateX(calc(-100% - 40px));
   }
+
   to {
     transform: translateX(0);
   }
@@ -151,4 +152,9 @@ hr.glow {
     mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
   }
+}
+
+
+input, textarea {
+  outline: none;
 }

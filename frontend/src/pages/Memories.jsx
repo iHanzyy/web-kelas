@@ -1,6 +1,4 @@
 import Navbar from "../components/Navbar";
-import ProfileCards from "../layouts/about-us/ProfileCards";
-import HeroSection from "../layouts/about-us/HeroSection";
 import Footer from "../components/Footer";
 import GlowText from "../components/GlowText";
 import Gallery from "../layouts/memories/Gallery";

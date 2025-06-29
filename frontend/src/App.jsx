@@ -19,6 +19,7 @@ function App() {
       <Route path="/structure" element={<Structure />}></Route>
       <Route path="/schedule" element={<Schedule />}></Route>
       <Route path="/memories" element={<Memories />}></Route>
+      <Route path="/menfess" element={<Menfess />}></Route>
       <Route path="/*" element={<NotFound />}></Route>
     </Routes>
   )
