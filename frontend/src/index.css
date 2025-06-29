@@ -1,64 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "poppins";
-  src: url(/src/fonts/Poppins-Regular.ttf);
-}
-
-@font-face {
-  font-family: "poppins bold";
-  src: url(/src/fonts/Poppins-Bold.ttf);
-}
-
-@font-face {
-  font-family: "poppins semibold";
-  src: url(/src/fonts/Poppins-SemiBold.ttf);
-}
-
-@font-face {
-  font-family: "poppins extra bold";
-  src: url(/src/fonts/Poppins-ExtraBold.ttf);
-}
-
-@font-face {
-  font-family: "poppins light";
-  src: url(/src/fonts/Poppins-Light.ttf);
-}
-
-
-
-:root {
-  font-family: "poppins";
-  color: var(--color-primary);
-}
-
-.glow {
-  color: var(--color-background);
-  text-shadow:
-      /* 0 0 4px rgba(20, 255, 236, 1),
-
-      0 0 8px rgba(20, 255, 236, 0.8), */
-    0 0 32px rgba(20, 255, 236, 0.6),
-
-    0 0 32px rgba(20, 255, 236, 0.4),
-    0 0 64px rgba(20, 255, 236, 0.2),
-
-    0 0 96px rgba(20, 255, 236, 0.1);
-
-  transition: all 0.3s ease-in-out;
-}
-
-.upper-glow {
-
-  stroke: #0ff;
-  stroke-width: 2px;
-  stroke-linejoin: round;
-
-
-  filter:
-    drop-shadow(0 0 16px #0ff) drop-shadow(0 0 32px #0ff) drop-shadow(0 0 64px #0ff);
-}
-
 @theme {
   --color-background: oklch(0.25 0 0);
   --color-background-2: oklch(0.2478 0 0);
@@ -68,29 +9,87 @@
   --color-secondary: oklch(0.51 0.0832 199.23);
   --color-foreground: oklch(0.89 0 0);
   --color-card: oklch(0.89 0 0);
-  
+
   --font-poppins-bold: "poppins bold";
   --font-poppins-semibold: "poppins semibold";
   --font-poppins-extrabold: "poppins extra bold";
   --font-poppins-light: "poppins light";
-  --animate-slide-left: slide-to-left 20s linear infinite;
-  --animate-slide-right: slide-to-right 20s linear infinite;
+
+  /* Updated animations with better timing */
+  --animate-slide-left: slide-to-left 30s linear infinite;
+  --animate-slide-right: slide-to-right 30s linear infinite;
+  --animate-slide-left-slow: slide-to-left 45s linear infinite;
 }
 
+@font-face {
+  font-family: "poppins";
+  src: url(/src/fonts/Poppins-Regular.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "poppins bold";
+  src: url(/src/fonts/Poppins-Bold.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "poppins semibold";
+  src: url(/src/fonts/Poppins-SemiBold.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "poppins extra bold";
+  src: url(/src/fonts/Poppins-ExtraBold.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "poppins light";
+  src: url(/src/fonts/Poppins-Light.ttf);
+  font-display: swap;
+}
+
+:root {
+  font-family: "poppins";
+  color: var(--color-primary);
+}
+
+/* Glow effects */
+.glow {
+  color: var(--color-background);
+  text-shadow: 0 0 32px rgba(20, 255, 236, 0.6), 0 0 32px rgba(20, 255, 236, 0.4), 0 0 64px rgba(20, 255, 236, 0.2), 0 0
+    96px rgba(20, 255, 236, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.upper-glow {
+  stroke: #0ff;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 16px #0ff) drop-shadow(0 0 32px #0ff) drop-shadow(0 0 64px #0ff);
+}
+
+/* Updated carousel styles for proper infinite scroll */
 .carousel {
   margin: 0 auto;
-  width: 175vw;
+  width: 100vw;
   overflow: hidden;
   display: flex;
   position: relative;
+  /* Add fade effect at edges */
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
 .group {
   display: flex;
   gap: 40px;
   padding: 0 20px;
-  min-width: 100%;
+  min-width: max-content;
   flex-wrap: nowrap;
+  flex-shrink: 0;
 }
 
 .slide-left {
@@ -101,15 +100,19 @@
   animation: var(--animate-slide-right);
 }
 
-.group+.group {
-  margin-left: 40px;
+.slide-left-slow {
+  animation: var(--animate-slide-left-slow);
+}
+
+/* Pause animation on hover */
+.carousel:hover .group {
+  animation-play-state: paused;
 }
 
 @keyframes slide-to-left {
   from {
     transform: translateX(0);
   }
-
   to {
     transform: translateX(calc(-100% - 40px));
   }
@@ -119,25 +122,33 @@
   from {
     transform: translateX(calc(-100% - 40px));
   }
-
   to {
     transform: translateX(0);
   }
 }
-
 
 hr.glow {
   position: relative;
   border: none;
   height: 1px;
   background-color: #0ff;
-
-
-  box-shadow:
-    0 0 30px 3px #0ff;
+  box-shadow: 0 0 30px 3px #0ff;
 }
 
 .card-glow {
   position: relative;
   box-shadow: -0.5rem 0.5rem 25px var(--color-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .group {
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .carousel {
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  }
 }

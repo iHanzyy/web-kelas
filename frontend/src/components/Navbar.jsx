@@ -11,7 +11,7 @@ export default function Navbar() {
       <div className=" flex text-primary font-semibold items-center gap-[60px] mr-[60px]">
         <div className="cursor-pointer"><Link to="/about-us">About Us</Link></div>
         <div className="cursor-pointer"><Link to="/structure">Structure & Schedule</Link></div>
-        <div className="cursor-pointer">Memories</div>
+        <div className="cursor-pointer"><Link to="/memories">Memories</Link></div>
         <div className="cursor-pointer">Menfess</div>
       </div>
     </div>
