@@ -1,19 +1,47 @@
 import AccentUnderline from "./AccentUnderline";
+import { Link } from "react-router";
 
 export default function Footer(props) {
   const developers = [
-    "Mohammad Jonah Setiawan",
-    "Zulfahmi Risky Aulia",
-    "Ahmad Faris Widyawan",
-    "Faiz Zaenal Muttaqin",
-    "Nayaka Linggar Abimanyu"
+    {
+      name: "Mohammad Jonah Setiawan",
+      instagram: "jojomornov",
+    },
+    {
+      name: "Zulfahmi Risky Aulia",
+      instagram: "thefabulouspahmi",
+    },
+    {
+      name: "Ahmad Faris Widyawan",
+      instagram: "vathmos",
+    },
+    {
+      name: "Faiz Zaenal Muttaqin",
+      instagram: "cuiras_13",
+    },
+    {
+      name: "Nayaka Linggar Abimanyu",
+      instagram: "nayakaaano",
+    },
   ]
 
   const links = [
-    "About Us",
-    "Structure & Schedule",
-    "Memories",
-    "Menfess"
+    {
+      label: "About Us",
+      destination: "/about-us"
+    },
+    {
+      label: "Structure & Schedule",
+      destination: "/structure"
+    },
+    {
+      label: "Memories",
+      destination: "/memories"
+    },
+    {
+      label: "Menfess",
+      destination: "/menfess"
+    },
   ]
 
 
@@ -32,7 +60,7 @@ export default function Footer(props) {
             <div className="flex flex-col gap-4 h-[236px]">
               <AccentUnderline label="Developer" percent="33" className="text-[20px]" />
               <ul className="list-disc flex flex-col h-full justify-between items-between">
-                {developers.map((developer, i) => <li key={i}>{developer}</li>)}
+                {developers.map((developer, i) => <li key={i}><Link to={`https://www.instagram.com/${developer.instagram}`}>{developer.name}</Link></li>)}
               </ul>
             </div>
           </div>
@@ -40,7 +68,7 @@ export default function Footer(props) {
             <div className="flex flex-col gap-4 h-[236px]">
               <AccentUnderline label="Links" percent="33" className="text-[20px]" />
               <ul className="flex flex-col h-full justify-between">
-                {links.map((link, i) => <li key={i}>{link}</li>)}
+                {links.map((link, i) => <li key={i}><Link to={link.destination}>{link.label}</Link></li>)}
               </ul>
             </div>
           </div>
@@ -48,7 +76,7 @@ export default function Footer(props) {
             <div className="flex flex-col gap-4 h-[236px]">
               <AccentUnderline label="Social Media" percent="33" className="text-[20px]" />
               <div className="flex w-full justify-between">
-                <img src="/instagram.svg" />
+                <Link to={"https://www.instagram.com/baskom.millenium/"}><img src="/instagram.svg" /></Link>
                 <img src="discord.svg" />
               </div>
             </div>
