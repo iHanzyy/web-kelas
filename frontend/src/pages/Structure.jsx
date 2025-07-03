@@ -20,7 +20,7 @@ export default function Structure() {
         </div>
         <div className="flex flex-col pb-56 w-[1000px] m-auto gap-10">
           <div className="flex flex-col gap-10">
-            <StructureCard title={"Wali Kelas"} name={"Rinaldi Maulana Prawiradireja"} image={"https://ptzuhtqthpzprljmnggi.supabase.co/storage/v1/object/public/student//rinaldi-maulana.jpg"} />
+            <StructureCard title={"Wali Kelas"} name={"Rinaldi Maulana Prawiradireja"} image={"https://ptzuhtqthpzprljmnggi.supabase.co/storage/v1/object/public/student//rinaldi-maulana.JPG"} />
             <StructureCard title={"Ketua Kelas"} name={"Mohammad Jonah Setiawan"} image={"https://ptzuhtqthpzprljmnggi.supabase.co/storage/v1/object/public/student//mohammad-jonah-setiawan.JPG"} />
             <StructureCard title={"Wakil Ketua Kelas"} name={"Zulfahmi Risky Aulia"} image={"https://ptzuhtqthpzprljmnggi.supabase.co/storage/v1/object/public/student//zulfahmi-rizki-aulia.JPG"} />
           </div>
