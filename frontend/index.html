@@ -5,8 +5,65 @@
     <link rel="icon" type="image/svg+xml" href="/rpl-logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Kelas</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .loader {
+        height: 120px;
+        aspect-ratio: 1;
+        position: relative;
+        clip-path: polygon(
+          100% 50%,
+          85.36% 85.36%,
+          50% 100%,
+          14.64% 85.36%,
+          0% 50%,
+          14.64% 14.64%,
+          50% 0%,
+          85.36% 14.64%,
+          100% 50%,
+          74.75% 25.25%,
+          50% 15%,
+          25.25% 25.25%,
+          15% 50%,
+          25.25% 74.75%,
+          50% 85%,
+          74.75% 74.75%,
+          85% 50%,
+          74.75% 25.25%
+        );
+        filter: blur(12px);
+      }
+      .loader:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: conic-gradient(#0000 35%, #14ffec, #0000 65%);
+        animation: l6 1s linear infinite;
+      }
+      @keyframes l6 {
+        to {
+          rotate: 1turn;
+        }
+      }
+
+      .preloader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: #222222;
+      }
+    </style>
   </head>
   <body class="bg-background overflow-x-hidden">
+    <div class="preloader">
+      <div class="loader"></div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
