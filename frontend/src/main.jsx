@@ -18,6 +18,6 @@ window.addEventListener('DOMContentLoaded', () => {
   if (loader) {
     setTimeout(() => {
       loader.remove();
-    }, 4000);
+    }, 3000);
   }
 });
