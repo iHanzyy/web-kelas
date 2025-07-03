@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ProfileCard from "../../components/ProfileCard";
-import shortenName from "../../utils/shortenName";
+import shortenName from "../../utils/ShortenName";
 
 export default function Cards() {
   const students = [
