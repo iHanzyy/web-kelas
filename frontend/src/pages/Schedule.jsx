@@ -255,7 +255,7 @@ export default function Schedule() {
           <div className="flex w-full flex-col justify-center items-center mt-20">
             <div className="w-[1000px] flex justify-around font-poppins-semibold text-3xl">
               {days.map((day, index) => (
-                <div key={index} className={`cursor-pointer uppercase ${jadwal.hari !== day ? "brightness-[0.6]" : ""}`} onClick={() => handleDayClick(index)}>{day}</div>
+                <div key={index} className={`cursor-pointer uppercase hover:brightness-90 ease-out duration-300 ${jadwal.hari !== day ? "brightness-[0.6]" : ""}`} onClick={() => handleDayClick(index)}>{day}</div>
               ))}
             </div>
             <div className="w-[1000px] mt-8 mb-20">
