@@ -264,7 +264,7 @@ export default function Cards() {
         <section
           className=" grid grid-cols-[repeat(4,max-content)] justify-between gap-y-20 w-full max-w-[1100px] mx-auto px-4">
           {getStudents().map((student, i) => (
-            <ProfileCard developer={student.developer} key={i} name={shortenName(student.name)} src={`https://ptzuhtqthpzprljmnggi.supabase.co/storage/v1/object/public/student//${student.name.split(" ").join("-")}.JPG`} />
+            <ProfileCard developer={student.developer} key={i} name={shortenName(student.name)} src={`/students/${student.name.split(" ").join("-")}.JPG`} />
           ))}
         </section>
       </div>
