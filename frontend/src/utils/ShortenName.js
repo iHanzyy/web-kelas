@@ -1,4 +1,4 @@
-export default function shortenName(name, maxLength = 17, alwaysShorten = ["MUHAMMAD", "MUHAMAD","MOHAMMAD","MOHAMAD"]) {
+export default function shortenName(name, maxLength = 18, alwaysShorten = ["MUHAMMAD", "MUHAMAD","MOHAMMAD","MOHAMAD"]) {
   if (!name || typeof name !== "string") return "";
 
   const normalizedAlwaysShorten = alwaysShorten.map(w => w.toLowerCase());

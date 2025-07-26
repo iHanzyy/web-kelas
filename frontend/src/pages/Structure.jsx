@@ -5,6 +5,100 @@ import Navbar from "../components/Navbar";
 import StructureCard from "../components/StructureCard";
 
 export default function Structure() {
+  const structureData = {
+    wali: [
+      {
+        name: "Siti Salbiyah",
+        title: "Wali Kelas",
+      }
+    ],
+    ketua: [
+      {
+        name: "Mohammad Jonah Setiawan",
+        title: "Ketua Kelas",
+      }
+    ],
+    waketu: [
+      {
+        name: "Ahmad Faris Widyawan",
+        title: "Wakil Ketua Kelas",
+      }
+    ],
+    bendahara: [
+      {
+        name: "Zulfahmi Rizki Aulia",
+        title: "Bendahara",
+      },
+    ],
+    sekretaris: [
+      {
+        name: "Genta Prawira Dyputra",
+        title: "Sekretaris",
+      },
+    ],
+    kordAgama: [
+      {
+        name: "Fahmi Shufyan Antono",
+        title: "Koor. Agama",
+      },
+      {
+        name: "Wardah Nuril Kaunain",
+        title: "Koor. Agama",
+      },
+    ],
+    kordOlahraga: [
+      {
+        name: "Muhammad Daffi Mursidik",
+        title: "Koor. Olahraga",
+      },
+      {
+        name: "Ajeng Dwi Sesayanis",
+        title: "Koor. Olahraga",
+      },
+    ],
+    kordKebersihan: [
+      {
+        name: "Muhamad Farhan Aditya",
+        title: "Koor. Kebersihan",
+      },
+      {
+        name: "Zahra Tusita",
+        title: "Koor. Kebersihan",
+      }
+    ],
+    kordPrestasi: [
+      {
+        name: "Arbi Masbul Gesang Malyaki",
+        title: "Koor. Prestasi",
+      },
+      {
+        name: "Vita Marizka",
+        title: "Koor. Prestasi",
+      },
+    ],
+    kordKetertibanKeamanan: [
+      {
+        name: "Satria Adi Pratama",
+        title: "Koor. Ketertiban & Keamanan",
+      },
+      {
+        name: "Abdu Rahman",
+        title: "Koor. Ketertiban & Keamanan",
+      },
+    ],
+
+  }
+
+  const StructureCards = ({ members }) => {
+    return members.map((member, index) => (
+      <StructureCard
+        key={index}
+        name={member.name}
+        title={member.title}
+        image={`/students/${member.name.toLowerCase().replace(/ /g, "-")}.JPG`}
+      />
+    ));
+  }
   return (
     <div>
       <Navbar />
@@ -20,31 +114,32 @@ export default function Structure() {
         </div>
         <div className="flex flex-col pb-56 w-[1000px] m-auto gap-10">
           <div className="flex flex-col gap-10">
-            <StructureCard title={"Wali Kelas"} name={"Rinaldi Maulana Prawiradireja"} image={"/students/rinaldi-maulana.JPG"} />
-            <StructureCard title={"Ketua Kelas"} name={"Mohammad Jonah Setiawan"} image={"/students/mohammad-jonah-setiawan.JPG"} />
-            <StructureCard title={"Wakil Ketua Kelas"} name={"Zulfahmi Risky Aulia"} image={"/students/zulfahmi-rizki-aulia.JPG"} />
+            <StructureCards members={structureData.wali}/>
+            <StructureCards members={structureData.ketua}/>
+            <StructureCards members={structureData.waketu}/>
           </div>
           <div className="flex w-full justify-evenly">
             <div className="flex flex-col">
-              <h1 className="text-center text-[22.4px] mb-6">Sekretaris</h1>
               <div className="flex gap-3 justify-evenly w-[450px]">
-                <StructureCard name={"Muhammad Harun Ikhsan"} image={"/students/muhammad-harun-ikhsan.JPG"} />
-                <StructureCard name={"Nindia Fatwa Qadima"} image={"/students/nindia-fatwa-qadima.JPG"} />
+                <StructureCards members={structureData.sekretaris}/>
               </div>
             </div>
             <div className="flex flex-col">
-              <h1 className="text-center text-[22.4px] mb-6">Bendahara</h1>
               <div className="flex gap-3 justify-evenly w-[450px]">
-                <StructureCard name={"Dini Ayuandini"} image={"/students/dini-ayuandini.JPG"} />
-                <StructureCard name={"Sumyar"} image={"/students/sumyar.JPG"} />
+                <StructureCards members={structureData.bendahara}/>
               </div>
             </div>
           </div>
-          <div className="flex w-full justify-between mt-10">
-            <StructureCard title={"Seksi 1"} />
-            <StructureCard title={"Seksi 2"} />
-            <StructureCard title={"Seksi 3"} />
-            <StructureCard title={"Seksi 4"} />
+          <div className="flex w-full justify-evenly mt-10">
+            <StructureCards members={structureData.kordAgama}/>
+            <StructureCards members={structureData.kordOlahraga}/>
+          </div>
+          <div className="flex w-full justify-evenly mt-10">
+            <StructureCards members={structureData.kordKebersihan}/>
+            <StructureCards members={structureData.kordPrestasi}/>
+          </div>
+          <div className="flex w-full justify-evenly mt-10">
+            <StructureCards members={structureData.kordKetertibanKeamanan}/>
           </div>
         </div>
       </div>
