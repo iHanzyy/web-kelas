@@ -16,8 +16,6 @@ createRoot(document.getElementById('root')).render(
 window.addEventListener('DOMContentLoaded', () => {
   const loader = document.querySelector('.preloader');
   if (loader) {
-    setTimeout(() => {
-      loader.remove();
-    }, 3000);
+    loader.remove();
   }
 });
