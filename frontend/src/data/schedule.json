@@ -1,0 +1,204 @@
+[
+  {
+    "hari": "Senin",
+    "pelajaran": {
+      "Umum": [
+        { "jam": 1, "waktu": "07:20 - 08:00", "mapel": "B. ING", "guru": "SUCI" },
+        { "jam": 2, "waktu": "08:00 - 08:40", "mapel": "B. ING", "guru": "SUCI" },
+        { "jam": 3, "waktu": "08:40 - 09:20", "mapel": "PABP", "guru": "SITI" },
+        { "jam": "istirahat", "waktu": "09:20 - 09:40", "mapel": "ISTIRAHAT" },
+        { "jam": 4, "waktu": "09:40 - 10:20", "mapel": "PABP", "guru": "SITI" },
+        { "jam": 5, "waktu": "10:20 - 11:00", "mapel": "MTK", "guru": "CHRISTIANINGTYAS" },
+        { "jam": 6, "waktu": "11:00 - 11:40", "mapel": "MTK", "guru": "CHRISTIANINGTYAS" },
+        { "jam": 7, "waktu": "11:40 - 12:20", "mapel": "MTK", "guru": "CHRISTIANINGTYAS" },
+        { "jam": "istirahat", "waktu": "12:20 - 13:00", "mapel": "ISTIRAHAT" },
+        { "jam": 8, "waktu": "13:00 - 13:40", "mapel": "MTK", "guru": "CHRISTIANINGTYAS" },
+        { "jam": 9, "waktu": "13:40 - 14:20", "mapel": "KOKURIKULER", "guru": "ELA" },
+        { "jam": 10, "waktu": "14:20 - 15:00", "mapel": "KOKURIKULER", "guru": "ELA" }
+      ],
+      "Produktif": [
+        { "jam": 1, "waktu": "07:20 - 08:00", "mapel": "PPL", "guru": "ALFI" },
+        { "jam": 2, "waktu": "08:00 - 08:40", "mapel": "PPL", "guru": "ALFI" },
+        { "jam": 3, "waktu": "08:40 - 09:20", "mapel": "KOKURIKULER", "guru": "RINA" },
+        { "jam": "istirahat", "waktu": "09:20 - 09:40", "mapel": "ISTIRAHAT" },
+        { "jam": 4, "waktu": "09:40 - 10:20", "mapel": "KOKURIKULER", "guru": "RINA" },
+        { "jam": 5, "waktu": "10:20 - 11:00", "mapel": "PPL", "guru": "ALFI" },
+        { "jam": 6, "waktu": "11:00 - 11:40", "mapel": "PPL", "guru": "ALFI" },
+        { "jam": 7, "waktu": "11:40 - 12:20", "mapel": "PPL", "guru": "ALFI" },
+        { "jam": "istirahat", "waktu": "12:20 - 13:00", "mapel": "ISTIRAHAT" },
+        { "jam": 8, "waktu": "13:00 - 13:40", "mapel": "PPL", "guru": "ALFI" },
+        { "jam": 9, "waktu": "13:40 - 14:20", "mapel": "PPL", "guru": "ALFI" },
+        { "jam": 10, "waktu": "14:20 - 15:00", "mapel": "PPL", "guru": "ALFI" }
+      ]
+    },
+    "piket": [
+      "zahra tusita",
+      "nindia fatwa qadima",
+      "hafiz arya pratama",
+      "nayaka linggar abimanyu",
+      "abdu rahman",
+      "mohammad jonah setiawan",
+      "satria adi pratama"
+    ]
+  },
+  {
+    "hari": "Selasa",
+    "pelajaran": {
+      "Umum": [
+        { "jam": 1, "waktu": "07:00 - 07:40", "mapel": "KIK", "guru": "YUSHARIZAL" },
+        { "jam": 2, "waktu": "07:40 - 08:20", "mapel": "KIK", "guru": "YUSHARIZAL" },
+        { "jam": 3, "waktu": "08:20 - 09:00", "mapel": "KIK", "guru": "YUSHARIZAL" },
+        { "jam": 4, "waktu": "09:00 - 09:40", "mapel": "KIK", "guru": "YUSHARIZAL" },
+        { "jam": "istirahat", "waktu": "09:40 - 10:00", "mapel": "ISTIRAHAT" },
+        { "jam": 5, "waktu": "10:00 - 10:40", "mapel": "KIK", "guru": "YUSHARIZAL" },
+        { "jam": 6, "waktu": "10:40 - 11:20", "mapel": "KIK", "guru": "YUSHARIZAL" },
+        { "jam": 7, "waktu": "11:20 - 12:00", "mapel": "KIK", "guru": "YUSHARIZAL" },
+        { "jam": "istirahat", "waktu": "12:00 - 13:00", "mapel": "ISTIRAHAT" },
+        { "jam": 8, "waktu": "13:00 - 13:40", "mapel": "KIK", "guru": "YUSHARIZAL" },
+        { "jam": 9, "waktu": "13:40 - 14:20", "mapel": "KIK", "guru": "YUSHARIZAL" },
+        { "jam": 10, "waktu": "14:20 - 15:00", "mapel": "KIK", "guru": "YUSHARIZAL" }
+      ],
+      "Produktif": [
+        { "jam": 1, "waktu": "07:00 - 07:40", "mapel": "WEB", "guru": "YULI" },
+        { "jam": 2, "waktu": "07:40 - 08:20", "mapel": "WEB", "guru": "YULI" },
+        { "jam": 3, "waktu": "08:20 - 09:00", "mapel": "PBO", "guru": "FANI" },
+        { "jam": 4, "waktu": "09:00 - 09:40", "mapel": "PBO", "guru": "FANI" },
+        { "jam": "istirahat", "waktu": "09:40 - 10:00", "mapel": "ISTIRAHAT" },
+        { "jam": 5, "waktu": "10:00 - 10:40", "mapel": "PBO", "guru": "FANI" },
+        { "jam": 6, "waktu": "10:40 - 11:20", "mapel": "PBO", "guru": "FANI" },
+        { "jam": 7, "waktu": "11:20 - 12:00", "mapel": "PBO", "guru": "FANI" },
+        { "jam": "istirahat", "waktu": "12:00 - 13:00", "mapel": "ISTIRAHAT" },
+        { "jam": 8, "waktu": "13:00 - 13:40", "mapel": "PBO", "guru": "FANI" },
+        { "jam": 9, "waktu": "13:40 - 14:20", "mapel": "PBO", "guru": "FANI" },
+        { "jam": 10, "waktu": "14:20 - 15:00", "mapel": "PBO", "guru": "FANI" }
+      ]
+    },
+    "piket": [
+      "vita marizka",
+      "cylvia triza",
+      "muhammad fachri afrian",
+      "dhika muhammad frizar",
+      "faiz zaenal muttaqin",
+      "muhammad daffi mursidik",
+      "zulfahmi riski aulia"
+    ]
+  },
+  {
+    "hari": "Rabu",
+    "pelajaran": {
+      "Umum": [
+        { "jam": 1, "waktu": "07:00 - 07:40", "mapel": "B. INDO", "guru": "ANNE" },
+        { "jam": 2, "waktu": "07:40 - 08:20", "mapel": "B. INDO", "guru": "ANNE" },
+        { "jam": 3, "waktu": "08:20 - 09:00", "mapel": "GAME", "guru": "ARIEF" },
+        { "jam": 4, "waktu": "09:00 - 09:40", "mapel": "GAME", "guru": "ARIEF" },
+        { "jam": "istirahat", "waktu": "09:40 - 10:00", "mapel": "ISTIRAHAT" },
+        { "jam": 5, "waktu": "10:00 - 10:40", "mapel": "GAME", "guru": "ARIEF" },
+        { "jam": 6, "waktu": "10:40 - 11:20", "mapel": "GAME", "guru": "ARIEF" },
+        { "jam": 7, "waktu": "11:20 - 12:00", "mapel": "GAME", "guru": "ARIEF" },
+        { "jam": "istirahat", "waktu": "12:00 - 13:00", "mapel": "ISTIRAHAT" },
+        { "jam": 8, "waktu": "13:00 - 13:40", "mapel": "GAME", "guru": "ARIEF" },
+        { "jam": 9, "waktu": "13:40 - 14:20", "mapel": "GAME", "guru": "ARIEF" },
+        { "jam": 10, "waktu": "14:20 - 15:00", "mapel": "GAME", "guru": "ARIEF" }
+      ],
+      "Produktif": [
+        { "jam": 1, "waktu": "07:00 - 07:40", "mapel": "WEB", "guru": "YULI" },
+        { "jam": 2, "waktu": "07:40 - 08:20", "mapel": "WEB", "guru": "YULI" },
+        { "jam": 3, "waktu": "08:20 - 09:00", "mapel": "WEB", "guru": "YULI" },
+        { "jam": 4, "waktu": "09:00 - 09:40", "mapel": "WEB", "guru": "YULI" },
+        { "jam": "istirahat", "waktu": "09:40 - 10:00", "mapel": "ISTIRAHAT" },
+        { "jam": 5, "waktu": "10:00 - 10:40", "mapel": "WEB", "guru": "YULI" },
+        { "jam": 6, "waktu": "10:40 - 11:20", "mapel": "WEB", "guru": "YULI" },
+        { "jam": 7, "waktu": "11:20 - 12:00", "mapel": "WEB", "guru": "YULI" },
+        { "jam": "istirahat", "waktu": "12:00 - 13:00", "mapel": "ISTIRAHAT" },
+        { "jam": 8, "waktu": "13:00 - 13:40", "mapel": "WEB", "guru": "YULI" },
+        { "jam": 9, "waktu": "13:40 - 14:20", "mapel": "WEB", "guru": "YULI" },
+        { "jam": 10, "waktu": "14:20 - 15:00", "mapel": "WEB", "guru": "YULI" }
+      ]
+    },
+    "piket": [
+      "ajeng dwi sesayanis",
+      "rana diandra zahra",
+      "arbi masbul gesang malyaki",
+      "muhamad dyreztha reys hidayat",
+      "muhammad farrel nachrawi",
+      "raden muhammad nabil fathur rahman",
+      "muhammad harun ikhsan"
+    ]
+  },
+  {
+    "hari": "Kamis",
+    "pelajaran": {
+      "Umum": [
+        { "jam": 1, "waktu": "07:00 - 07:40", "mapel": "P. PANCASILA", "guru": "JULIYANTIKA" },
+        { "jam": 2, "waktu": "07:40 - 08:20", "mapel": "P. PANCASILA", "guru": "JULIYANTIKA" },
+        { "jam": 3, "waktu": "08:20 - 09:00", "mapel": "P. PANCASILA", "guru": "JULIYANTIKA" },
+        { "jam": 4, "waktu": "09:00 - 09:40", "mapel": "P. PANCASILA", "guru": "JULIYANTIKA" },
+        { "jam": "istirahat", "waktu": "09:40 - 10:00", "mapel": "ISTIRAHAT" },
+        { "jam": 5, "waktu": "10:00 - 10:40", "mapel": "B. INDO", "guru": "ANNE" },
+        { "jam": 6, "waktu": "10:40 - 11:20", "mapel": "B. INDO", "guru": "ANNE" },
+        { "jam": 7, "waktu": "11:20 - 12:00", "mapel": "B. ING", "guru": "SUCI" },
+        { "jam": "istirahat", "waktu": "12:00 - 13:00", "mapel": "ISTIRAHAT" },
+        { "jam": 8, "waktu": "13:00 - 13:40", "mapel": "B. ING", "guru": "SUCI" },
+        { "jam": 9, "waktu": "13:40 - 14:20", "mapel": "B. ING", "guru": "SUCI" },
+        { "jam": 10, "waktu": "14:20 - 15:00", "mapel": "B. ING", "guru": "SUCI" }
+      ],
+      "Produktif": [
+        { "jam": 1, "waktu": "07:00 - 07:40", "mapel": "DATABASE", "guru": "FANI" },
+        { "jam": 2, "waktu": "07:40 - 08:20", "mapel": "DATABASE", "guru": "FANI" },
+        { "jam": 3, "waktu": "08:20 - 09:00", "mapel": "PBO", "guru": "FANI" },
+        { "jam": 4, "waktu": "09:00 - 09:40", "mapel": "PBO", "guru": "FANI" },
+        { "jam": "istirahat", "waktu": "09:40 - 10:00", "mapel": "ISTIRAHAT" },
+        { "jam": 5, "waktu": "10:00 - 10:40", "mapel": "PBO", "guru": "FANI" },
+        { "jam": 6, "waktu": "10:40 - 11:20", "mapel": "PBO", "guru": "FANI" },
+        { "jam": 7, "waktu": "11:20 - 12:00", "mapel": "PBO", "guru": "FANI" },
+        { "jam": "istirahat", "waktu": "12:00 - 13:00", "mapel": "ISTIRAHAT" },
+        { "jam": 8, "waktu": "13:00 - 13:40", "mapel": "PBO", "guru": "FANI" },
+        { "jam": 9, "waktu": "13:40 - 14:20", "mapel": "PBO", "guru": "FANI" },
+        { "jam": 10, "waktu": "14:20 - 15:00", "mapel": "PBO", "guru": "FANI" }
+      ]
+    },
+    "piket": [
+      "amalia rahmadani oktaviani",
+      "ayuni ramadhani",
+      "ezhar raditya putra",
+      "rian panji asmoro",
+      "genta prawira dyputra",
+      "nabil faiq aflah",
+      "fahmi shufyan antono"
+    ]
+  },
+  {
+    "hari": "Jumat",
+    "pelajaran": {
+      "Umum": [
+        { "jam": 1, "waktu": "07:20 - 08:00", "mapel": "PABP", "guru": "SITI" },
+        { "jam": 2, "waktu": "08:00 - 08:40", "mapel": "PABP", "guru": "SITI" },
+        { "jam": 3, "waktu": "08:40 - 09:20", "mapel": "PABP", "guru": "SITI" },
+        { "jam": "istirahat", "waktu": "09:20 - 09:40", "mapel": "ISTIRAHAT" },
+        { "jam": 4, "waktu": "09:40 - 10:20", "mapel": "PABP", "guru": "SITI" },
+        { "jam": 5, "waktu": "10:20 - 11:00", "mapel": "B. ING", "guru": "SUCI" },
+        { "jam": 6, "waktu": "11:00 - 11:40", "mapel": "B. ING", "guru": "SUCI" },
+        { "jam": "istirahat", "waktu": "11:40 - 13:00", "mapel": "ISTIRAHAT" }
+      ],
+      "Produktif": [
+        { "jam": 1, "waktu": "07:20 - 08:00", "mapel": "DATABASE", "guru": "FANI" },
+        { "jam": 2, "waktu": "08:00 - 08:40", "mapel": "DATABASE", "guru": "FANI" },
+        { "jam": 3, "waktu": "08:40 - 09:20", "mapel": "DATABASE", "guru": "FANI" },
+        { "jam": "istirahat", "waktu": "09:20 - 09:40", "mapel": "ISTIRAHAT" },
+        { "jam": 4, "waktu": "09:40 - 10:20", "mapel": "DATABASE", "guru": "FANI" },
+        { "jam": 5, "waktu": "10:20 - 11:00", "mapel": "DATABASE", "guru": "FANI" },
+        { "jam": 6, "waktu": "11:00 - 11:40", "mapel": "DATABASE", "guru": "FANI" },
+        { "jam": "istirahat", "waktu": "11:40 - 13:00", "mapel": "ISTIRAHAT" }
+      ]
+    },
+    "piket": [
+      "wardah nuril kaunain",
+      "dini ayuandini",
+      "ahmad faris widyawan",
+      "muhamad farhan aditya",
+      "januari tadanantara rupajati",
+      "rafly atha maulana",
+      "sumyar"
+    ]
+  }
+]
