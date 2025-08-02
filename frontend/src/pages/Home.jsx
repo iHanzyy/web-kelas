@@ -7,9 +7,11 @@ export default function Home() {
   return (
     <div className=" w-screen h-auto overflow-hidden">
       <Navbar />
-      <HeroSection />
-      <Gallery />
-      <Footer className="bg-secondary"/>
+      <div className="relative overflow-hidden">
+        <HeroSection />
+        <Gallery />
+      </div>
+      <Footer className="bg-secondary" />
     </div>
   )
 }

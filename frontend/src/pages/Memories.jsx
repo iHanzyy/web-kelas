@@ -7,7 +7,7 @@ export default function Memories() {
   return (
     <>
       <Navbar />
-      <section className="border-[#14FFEC] border-t-[2rem] border-x-[2rem] h-screen relative -z-20">
+      <section className="border-[#14FFEC] border-t-[2rem] border-x-[2rem] h-screen relative -z-20 overflow-hidden">
         <div className="translate-y-[-2rem] flex items-center justify-center w-full h-[calc(100vh-60px)]">
           <div className="flex-1/2">
             <GlowText text="MEMORIES" font="font-poppins-semibold" size="text-7xl"/>

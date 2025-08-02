@@ -14,7 +14,7 @@ export default function Cards() {
   const getStudents = () => {
     if (showMode === "ALL") {
       return students;
-    } else if (showMode === "DEVELOPER") {
+    } else if (showMode === "DEVELOPERS") {
       return developers;
     } else if (showMode === "WOMEN") {
       return females;
@@ -29,7 +29,7 @@ export default function Cards() {
     "ALL",
     "MEN",
     "WOMEN",
-    "DEVELOPER"
+    "DEVELOPERS"
   ]
 
   return (
