@@ -1,0 +1,82 @@
+{
+  "wali": [
+    {
+      "name": "Siti Salbiyah",
+      "title": "Wali Kelas"
+    }
+  ],
+  "ketua": [
+    {
+      "name": "Mohammad Jonah Setiawan",
+      "title": "Ketua Kelas"
+    }
+  ],
+  "waketu": [
+    {
+      "name": "Ahmad Faris Widyawan",
+      "title": "Wakil Ketua Kelas"
+    }
+  ],
+  "bendahara": [
+    {
+      "name": "Zulfahmi Rizki Aulia",
+      "title": "Bendahara"
+    }
+  ],
+  "sekretaris": [
+    {
+      "name": "Genta Prawira Dyputra",
+      "title": "Sekretaris"
+    }
+  ],
+  "kordAgama": [
+    {
+      "name": "Fahmi Shufyan Antono",
+      "title": "Koor. Agama"
+    },
+    {
+      "name": "Wardah Nuril Kaunain",
+      "title": "Koor. Agama"
+    }
+  ],
+  "kordOlahraga": [
+    {
+      "name": "Muhammad Daffi Mursidik",
+      "title": "Koor. Olahraga"
+    },
+    {
+      "name": "Ajeng Dwi Sesayanis",
+      "title": "Koor. Olahraga"
+    }
+  ],
+  "kordKebersihan": [
+    {
+      "name": "Muhamad Farhan Aditya",
+      "title": "Koor. Kebersihan"
+    },
+    {
+      "name": "Zahra Tusita",
+      "title": "Koor. Kebersihan"
+    }
+  ],
+  "kordPrestasi": [
+    {
+      "name": "Arbi Masbul Gesang Malyaki",
+      "title": "Koor. Prestasi"
+    },
+    {
+      "name": "Vita Marizka",
+      "title": "Koor. Prestasi"
+    }
+  ],
+  "kordKetertibanKeamanan": [
+    {
+      "name": "Satria Adi Pratama",
+      "title": "Koor. Ketertiban & Keamanan"
+    },
+    {
+      "name": "Abdu Rahman",
+      "title": "Koor. Ketertiban & Keamanan"
+    }
+  ]
+}
