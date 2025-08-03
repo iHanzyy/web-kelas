@@ -8,7 +8,7 @@ export default function Gallery() {
       <img src="/wavy-top-3.svg" className="absolute -translate-y-[350px] -z-10 object-cover w-full object-top h-[500px]" />
       <div className="flex justify-center items-center -translate-y-[100px] mb-[10px]">
       </div>
-      <div className="flex flex-col gap-16">
+      <div className="flex flex-col gap-8 sm:gap-12 md:gap-16">
         <div class="carousel">
           <div class="group slide-left">
             {foo.map((_, i) => (

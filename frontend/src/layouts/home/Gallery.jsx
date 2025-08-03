@@ -5,12 +5,13 @@ export default function Gallery() {
 
   return (
     <div className="overflow-hidden bg-secondary w-full mt-[140px] pb-[140px]">
-      <img src="/wavy-top.svg" className="absolute -translate-y-[120px] -z-10 upper-glow object-cover w-full object-top h-[200px]" />
+      <img src="/wavy-top.svg" className="hidden sm:block absolute -translate-y-[120px] -z-10 upper-glow object-cover w-full object-top h-[200px]" />
+      <img src="/wavy-top-4.svg" className="sm:hidden block absolute -translate-y-[120px] -z-10 upper-glow object-cover w-full object-top h-[300px]" />
       <div className="flex justify-center items-center mb-[60px]">
         <p className="text-center font-poppins-semibold text-[40px] z-10">Gallery</p>
         <p className="text-center font-poppins-semibold text-[40px] translate-y-[1%]  glow absolute">Gallery</p>
       </div>
-      <div className="flex flex-col gap-16">
+      <div className="flex flex-col  gap-8 sm:gap-12 md:gap-16">
         <div class="carousel">
           <div class="group slide-left">
             {foo.map((_, i) => (

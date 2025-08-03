@@ -7,7 +7,7 @@ export default function AboutUs() {
   return (
     <>
       <Navbar />
-      <section className="border-[#14FFEC] border-t-[2rem] border-x-[2rem] h-screen">
+      <section className="border-[#14FFEC] sm:border-t-[2rem] sm:border-x-[2rem] h-screen">
         <HeroSection />
       </section>
       <ProfileCards />

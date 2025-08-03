@@ -27,18 +27,17 @@ export default function Schedule() {
   return (
     <div>
       <Navbar />
-      <div className="relative w-full overflow-hidden">
+      <div className="relative w-full overflow-hidden bg-background">
         <div className="w-screen overflow-hidden">
-          <div className="-z-30 w-[85vw] h-[40vw] bg-secondary rounded-[50%] md:translate-y-[310%] sm:hidden translate-y-[1010%] md:translate-x-[75%] translate-x-[75%] absolute"></div>
-          <div className="-z-30 w-[85vw] h-[40vw] bg-secondary rounded-[50%] md:translate-y-[210%] md:hidden translate-y-[810%] md:translate-x-[-50%] translate-x-[-50%] absolute"></div>
-          <div className="-z-30 w-[85vw] h-[40vw] bg-secondary rounded-[50%] md:translate-y-[310%] translate-y-[610%] md:translate-x-[75%] translate-x-[75%] absolute"></div>
-          <div className="-z-30 w-[85vw] h-[40vw] bg-secondary rounded-[50%] md:translate-y-[210%] translate-y-[410%] md:translate-x-[-50%] translate-x-[-50%] absolute"></div>
-          <div className="-z-30 w-[85vw] h-[40vw] bg-secondary rounded-[50%] md:translate-y-[110%] translate-y-[210%] md:translate-x-[75%] translate-x-[75%] absolute"></div>
+          <div className="w-[85vw] h-[40vw] bg-secondary rounded-[50%] md:translate-y-[310%] sm:hidden translate-y-[1010%] md:translate-x-[75%] translate-x-[75%] absolute"></div>
+          <div className="w-[85vw] h-[40vw] bg-secondary rounded-[50%] md:translate-y-[210%] md:hidden translate-y-[810%] md:translate-x-[-50%] translate-x-[-50%] absolute"></div>
+          <div className="w-[85vw] h-[40vw] bg-secondary rounded-[50%] md:translate-y-[310%] translate-y-[610%] md:translate-x-[75%] translate-x-[75%] absolute"></div>
+          <div className="w-[85vw] h-[40vw] bg-secondary rounded-[50%] md:translate-y-[210%] translate-y-[410%] md:translate-x-[-50%] translate-x-[-50%] absolute"></div>
+          <div className="w-[85vw] h-[40vw] bg-secondary rounded-[50%] md:translate-y-[110%] translate-y-[210%] md:translate-x-[75%] translate-x-[75%] absolute"></div>
         </div>
         <div className="backdrop-blur-[200px]">
           <div className="w-screen h-[calc(100vh-60px)]  flex justify-center items-center">
-            <div className="text-5xl hidden sm:flex"><span className="brightness-75"><Link to={"/structure"}>Structure</Link></span>&nbsp;<GlowText font="poppins" size={48} text="&" />&nbsp;<span className="underline underline-offset-8"><GlowText size={48} font="poppins" text="Schedule" /></span></div>
-            <div className="text-5xl  flex-col flex sm:hidden"><span className="brightness-75"><Link to={"/structure"}>Structure</Link></span>&nbsp;<GlowText font="poppins" size={48} text="&" />&nbsp;<span className="underline underline-offset-8"><GlowText size={48} font="poppins" text="Schedule" /></span></div>
+            <div className="text-4xl  sm:text-5xl flex-col flex sm:flex-row"><span className="brightness-75"><Link to={"/structure"}>Structure</Link></span>&nbsp;<GlowText font="poppins" size={48} text="&" />&nbsp;<span className="underline underline-offset-8"><GlowText size={48} font="poppins" text="Schedule" /></span></div>
           </div>
           <div className="z-10 overflow-hidden w-full pb-[140px]">
             <div className="flex w-full flex-col justify-center items-center mt-20">
