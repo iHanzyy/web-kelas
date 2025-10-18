@@ -16,7 +16,7 @@ datasource db {
 }
 
 model Menfess {
-  id        String   @id @default(uuid())
+  id        Int   @id @default(autoincrement())
   from      String
   to        String
   message   String
