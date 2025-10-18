@@ -63,7 +63,7 @@ async function updateMenfess(req, res) {
   }
 
   try {
-    const updatedMenfess = await menfessService.updateMenfess(id, data);
+    const updatedMenfess = await menfessService.updateMenfess(Number(id), data);
     res.json(updatedMenfess);
   } catch (error) {
     if (error.code === "P2025") {
@@ -77,7 +77,7 @@ async function deleteMenfess(req, res) {
   const { id } = req.params;
 
   try {
-    await menfessService.deleteMenfess(id);
+    await menfessService.deleteMenfess(Number(id));
     res.status(204).send();
   } catch (error) {
     if (error.code === "P2025") {
