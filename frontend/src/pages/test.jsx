@@ -1,9 +1,12 @@
-import MenfessCard from "../components/MenfessCard";
+import useFetchMenfess from "../hooks/useFetchMenfess";
 
 export default function Test() {
+  const { data } = useFetchMenfess();
+
+  console.log(data);
   return (
-    <div className="flex justify-center items-center h-screen bg-background">
-      <MenfessCard sender={"Romeo"} receiver={"Juliet"} message={"Kalau mencintaimu adalah kesalahan, maka biarkan aku salah selamanya."} />
+    <div>
+      <h1>Test Page</h1>
     </div>
-  )
+  );
 }
