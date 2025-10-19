@@ -64,7 +64,7 @@ export default function Menfess() {
               font="font-poppins-semibold"
             />
             <section className=" flex justify-center items-center pb-40 mx-auto gap-2 sm:gap-10 flex-wrap">
-              {menfessData.map((menfess) => (
+              {menfessData?.map((menfess) => (
                 <MenfessCard
                   key={menfess.id}
                   sender={menfess.sender}
