@@ -6,7 +6,7 @@ import Structure from "./pages/Structure";
 import Schedule from "./pages/Schedule";
 import NotFound from "./pages/NotFound";
 import Memories from "./pages/Memories";
-import Test from "./pages/Test";
+// import Test from "./pages/Test";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         <Route path="/schedule" element={<Schedule />}></Route>
         <Route path="/memories" element={<Memories />}></Route>
         <Route path="/menfess" element={<Menfess />}></Route>
-        <Route path="/test" element={<Test />}></Route>
+        {/* <Route path="/test" element={<Test />}></Route>*/}
         <Route path="/*" element={<NotFound />}></Route>
       </Routes>
     </>
