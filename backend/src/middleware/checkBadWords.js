@@ -1,6 +1,4 @@
-const fs = require("fs");
-
-const badwords = JSON.parse(fs.readFileSync("src/config/misuh.json", "utf-8"));
+const badwords = require("../config/misuh.json");
 
 const normalize = (str) =>
   String(str || "")
