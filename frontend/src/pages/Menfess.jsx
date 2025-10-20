@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import useCreateMenfess from "../hooks/useCreateMenfess";
 import useFetchMenfess from "../hooks/useFetchMenfess";
 import { useForm } from "react-hook-form";
+import { containsBadWords } from "../utils/badwordChecker";
 
 export default function Menfess() {
   const { data: menfessData, refetch: refetchMenfess } = useFetchMenfess();
@@ -14,10 +15,34 @@ export default function Menfess() {
     },
   });
 
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => {
-    createMenfess(data);
-    console.log(data);
+  const {
+    register,
+    handleSubmit,
+    setError,
+    clearErrors,
+    formState: { errors, isSubmitting },
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    for (const key of ["sender", "receiver", "message"]) {
+      const hit = containsBadWords(data[key]);
+      if (hit) {
+        setError(key, {
+          type: "validate",
+          message: `mengandung kata kasar: "${hit}"`,
+        });
+        return;
+      }
+    }
+
+    try {
+      await createMenfess(data);
+    } catch (e) {
+      setError("message", {
+        type: "server",
+        message: "Jangan nyepam, bisa kirim menfess lagi nanti",
+      });
+    }
   };
 
   return (
@@ -43,41 +68,106 @@ export default function Menfess() {
                 className="mt-4  flex flex-col sm:flex-row justify-between bg-background-secondary w-[calc(100vw-50px)] max-w-[900px]  h-auto sm:h-[340px] rounded-[52px] p-7 sm:p-12 gap-4 sm:gap-6 md:gap-10"
               >
                 <div className="flex flex-col items-center w-full sm:w-1/2 gap-4 sm:gap-8">
-                  <div className="flex flex-nowrap gap-2 bg-input rounded-[52px] w-full py-3 px-5 overflow-hidden">
-                    <div className="font-poppins-semibold text-nowrap">
-                      FROM :{" "}
+                  {/* SENDER */}
+                  <div>
+                    <div className="flex flex-nowrap gap-2 bg-input rounded-[52px] w-full py-3 px-5 overflow-hidden">
+                      <div className="font-poppins-semibold text-nowrap">
+                        FROM :{" "}
+                      </div>
+                      <input
+                        type="text"
+                        className="w-9/12"
+                        {...register("sender", {
+                          required: { value: true, message: "gk boleh kosong" },
+                          maxLength: {
+                            value: 70,
+                            message: "kepanjangan, max 50 karakter",
+                          },
+                          validate: (v) => {
+                            const hit = containsBadWords(v);
+                            return hit
+                              ? `mengandung kata kasar: "${hit}"`
+                              : true;
+                          },
+                          onChange: () => clearErrors("sender"),
+                        })}
+                      />
                     </div>
-                    <input
-                      type="text"
-                      className="w-9/12"
-                      {...register("sender", { required: true })}
-                    />
+                    <p className="text-sm pl-5 text-red-500 pt-1">
+                      {errors.sender?.message}
+                    </p>
                   </div>
-                  <div className="flex flex-nowrap gap-2 bg-input rounded-[52px] w-full py-3 px-5">
-                    <div className="font-poppins-semibold text-nowrap">
-                      TO :{" "}
+
+                  {/* RECEIVER */}
+                  <div>
+                    <div className="flex flex-nowrap gap-2 bg-input rounded-[52px] w-full py-3 px-5">
+                      <div className="font-poppins-semibold text-nowrap">
+                        TO :{" "}
+                      </div>
+                      <input
+                        type="text"
+                        className="w-10/12"
+                        {...register("receiver", {
+                          required: { value: true, message: "gk boleh kosong" },
+                          maxLength: {
+                            value: 70,
+                            message: "kepanjangan, max 50 karakter",
+                          },
+                          validate: (v) => {
+                            const hit = containsBadWords(v);
+                            return hit
+                              ? `mengandung kata kasar: "${hit}"`
+                              : true;
+                          },
+                          onChange: () => clearErrors("receiver"),
+                        })}
+                      />
                     </div>
-                    <input
-                      type="text"
-                      className="w-10/12"
-                      {...register("receiver", { required: true })}
-                    />
+                    <p className="text-sm pl-5 text-red-500 pt-1">
+                      {errors.receiver?.message}
+                    </p>
                   </div>
-                  <button className="hidden sm:block bg-input rounded-[52px] w-fit py-2 px-6 cursor-pointer font-poppins-semibold">
-                    SEND
+
+                  <button
+                    className="hidden sm:block bg-input rounded-[52px] w-fit py-2 px-6 cursor-pointer font-poppins-semibold"
+                    type="submit"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Sending..." : "SEND"}
                   </button>
                 </div>
-                <div className="w-full sm:w-1/2 bg-input rounded-[28px] h-[36vh] sm:h-full resize-none flex flex-col p-4">
-                  <div className="font-poppins-semibold">MESSAGE : </div>
-                  <textarea
-                    name=""
-                    id=""
-                    className="h-full w-full resize-none"
-                    {...register("message", { required: true })}
-                  ></textarea>
+
+                {/* MESSAGE */}
+                <div className="w-full sm:w-1/2">
+                  <div className="w-full bg-input rounded-[28px] h-[36vh] sm:h-full resize-none flex flex-col p-4">
+                    <div className="font-poppins-semibold">MESSAGE : </div>
+                    <textarea
+                      className="h-full w-full resize-none"
+                      {...register("message", {
+                        required: { value: true, message: "gk boleh kosong" },
+                        maxLength: {
+                          value: 400,
+                          message: "kepanjangan, max 400 karakter",
+                        },
+                        validate: (v) => {
+                          const hit = containsBadWords(v);
+                          return hit ? `mengandung kata kasar: "${hit}"` : true;
+                        },
+                        onChange: () => clearErrors("message"),
+                      })}
+                    ></textarea>
+                  </div>
+                  <p className="text-sm pl-5 text-red-500 pt-1">
+                    {errors.message?.message}
+                  </p>
                 </div>
-                <button className="sm:hidden self-center bg-input rounded-[52px] w-fit py-1 px-5 cursor-pointer font-poppins-semibold">
-                  SEND
+
+                <button
+                  className="sm:hidden self-center bg-input rounded-[52px] w-fit py-1 px-5 cursor-pointer font-poppins-semibold"
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "SEND"}
                 </button>
               </form>
             </div>

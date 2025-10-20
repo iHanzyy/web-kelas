@@ -2,7 +2,7 @@ export default function MenfessCard({ sender, receiver, message, date }) {
   return (
     <div className="text-sm sm:text-base w-[calc(100vw-50px)] sm:w-[330px] bg-background-tersary p-5 rounded-[52px] my-4">
       <div className="bg-input w-full h-full rounded-[28px] p-5">
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 break-words">
           <div className="self-end">{date}</div>
           <div className="">
             <span className="font-poppins-semibold">FROM : </span>
